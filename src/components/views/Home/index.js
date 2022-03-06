@@ -1,6 +1,7 @@
-import SearchSetup from "../SearchSetup";
-import Logo from '../../assets/Logo/logo.jpg' ;
+import React from "react";
+import Logo from '../../../assets/Logo/logo.jpg' ;
 import { Grid } from '@mui/material';
+import SearchSetup from '../../../components/SearchSetup'
 
 function Home() {
   return (
@@ -14,7 +15,7 @@ function Home() {
           display="flex" 
           sx={{ display: { xs:'none', md:'block' } }}
         >
-          <img src={Logo} alt="logo"/>
+          <img src={ Logo } alt="logo"/>
         </Grid>
         <Grid item
           xs={12}
