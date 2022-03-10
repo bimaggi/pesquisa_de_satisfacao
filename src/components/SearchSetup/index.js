@@ -42,17 +42,17 @@ function SearchSetup() {
     <form 
       onSubmit={ changeSetup }
       style={{ 
-        width: "60%", 
         display: "flex", 
         flexDirection: "column", 
         alignContent: "center" 
-      }
-    }>
+      }}
+      >
       <Typography 
         variant="h1" 
-        mb={ 4 } 
-        fontSize={ "1.2rem" } 
-        color="primary"
+        sx={{ 
+          fontSize: { md:"1.1rem", xs:"0.8rem" },
+          margin: { md:"1rem", xs:"0.8rem" }
+        }}
       >
         Participe da pesquisa e seja parte da nossa mudança!
       </Typography>

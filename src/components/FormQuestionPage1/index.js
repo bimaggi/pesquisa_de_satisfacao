@@ -8,10 +8,25 @@ function FormQuestionPage1(props) {
 	  props.onChange(result)
   }
 	return(
-    <FormControl>
-		  <RadioGroup value={props.options.item} onChange={handleChange}>
-        <FormLabel>{props.question}</FormLabel>
-		      { props.options.map((item, index) =>
+    <FormControl 
+	    sx={{ 
+		    display: "flex",
+		    margin:'5% 0 3% 5%',
+		    paddingRight:"2rem",
+		    marginTop: { md: "1rem", xs: "3rem" }
+	    }}
+		>
+		  <RadioGroup 
+			  value={props.options.item} 
+				onChange={handleChange}
+			>
+        <FormLabel 
+				  style={{marginBottom: '2%'}}
+				>
+					{props.question}
+				</FormLabel>
+				{ 
+				  props.options.map((item, index) =>
 		  	    <FormControlLabel value={item} control={<Radio/>} label={item} key={index}/>
 		      )
 		    }

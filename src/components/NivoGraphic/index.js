@@ -1,21 +1,26 @@
 import React from "react"
 import { ResponsiveBar } from "@nivo/bar"
-import { QUESTION } from "../../enums/constants";
-
+import { Typography } from '@mui/material'
 
 function NivoGraphic(props){
-
 	return(
-		<> 	
-		<h1>{props.title}</h1>
+    <>
+    <Typography variant="h2" 
+      sx={{
+        fontSize:{md:"1.6rem", xs:"1.2rem"},
+				padding:"3%", 
+				color:"gray",
+				marginTop:"2%",
+    }}
+    >{props.title}</Typography>
     <ResponsiveBar
-		  data={props.data}
+	  data={props.data}
       indexBy= "key"
-      margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
-      padding={0.3}
+      margin={{ top: 50, right: 75, bottom: 50, left: 60 }}
+      padding={0.2}
       valueScale={{ type: 'linear' }}
       indexScale={{ type: 'band', round: true }}
-      colors={{ "scheme": 'nivo' }}
+      colors={{  scheme: 'category10' }}
       defs={[
           {
               id: 'dots',
@@ -101,9 +106,8 @@ function NivoGraphic(props){
       ariaLabel="Nivo bar chart demo"
       barAriaLabel={function(e){return e.id+": "+e.formattedValue+" in country: "+e.indexValue}}
       minValue={0}
-      maxValue={100}
    />
-	 </>
+   </>
  )
 }
 export default NivoGraphic;
