@@ -13,12 +13,15 @@ function FormQuestionPage1(props) {
 		    display: "flex",
 		    margin:'5% 0 3% 5%',
 		    paddingRight:"2rem",
-		    marginTop: { md: "1rem", xs: "3rem" }
+		    marginTop: { md: "1rem", xs: "3rem" },
+				border: "1px solid gray",
+				padding:"2%",
 	    }}
 		>
 		  <RadioGroup 
 			  value={props.options.item} 
 				onChange={handleChange}
+				sx={{}}
 			>
         <FormLabel 
 				  style={{marginBottom: '2%'}}
