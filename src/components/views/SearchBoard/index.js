@@ -1,14 +1,14 @@
 import React, { useState } from "react"
 import { Button, Box } from '@mui/material'
+import { db, collection, setDoc, doc } from "../../../firebase_config"
+import { useNavigate } from "react-router-dom"
 import FormQuestionPage1 from "../../FormQuestionPage1"
 import FormQuestionPage2 from "../../FormQuestionPage2"
 import { QUESTION, OPTIONS, STATUS } from "../../../enums/constants"
-// import { useNavigate } from "react-router-dom"
-import { db, collection, setDoc, doc } from "../../../firebase_config"
 
 function SearchBoard() {
   const dbCollection = collection(db, 'Questions')
-  // let navigate = useNavigate();
+  let navigate = useNavigate();
 
   const[ showform, setShowForm ]= useState("true")
   const [ question, setQuestion ]= useState({})
@@ -31,6 +31,7 @@ function SearchBoard() {
       await setDoc(doc(dbCollection),{
         question
       })
+      navigate("/graficos")
     }
   }
   return(
