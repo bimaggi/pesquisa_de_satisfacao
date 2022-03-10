@@ -16,15 +16,18 @@ function FormQuestionPage2(props) {
         maxWidth: "100%",
         color: "gray",
         fontSize:{md:"1.7rem", xs:"1.1rem"},
+        border: "1px solid gray",
+        margin: "2%",
+
       }}
     > 
       <Typography 
         variant='h1'
         sx={{
           textAlign:"center",
-          marginBottom:"2%",
+          marginBottom:"1%",
           marginTop: "5%",
-          fontSize: { md:"1.6rem", xs:"1.1rem" }
+          fontSize: { md:"1.3rem", xs:"1.1rem" }
         }}
       >
         {props.question}
@@ -42,6 +45,9 @@ function FormQuestionPage2(props) {
             display:'flex', 
             justifyContent:"space-between",
             width:{md:"50%",xs:"100%"},
+            border: {md: "1px solid gray", xs:'none'},
+            padding: "2%"
+
            }}
           onClick={handleOption}
         >
@@ -61,7 +67,7 @@ function FormQuestionPage2(props) {
           display:"flex", 
           justifyContent:"space-around",
           maxWidth:"100%", 
-          marginBottom:"5%",
+          marginBottom:"4%",
         }}
         >
           <Box 

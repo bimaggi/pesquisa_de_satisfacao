@@ -96,6 +96,14 @@ function SearchBoard() {
             display: "flex",
             flexDirection: "column",
           }}>
+            <Typography 
+              sx={{
+                textAlign:"center",
+                color: "gray",
+              }}
+            >
+              Numa escala de 1 a 7 como você avalia:
+            </Typography>
             <form 
               showform="false" 
               onSubmit={ setResultPage }

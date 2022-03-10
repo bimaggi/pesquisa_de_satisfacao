@@ -1,10 +1,10 @@
 export const QUESTION = {
-  QUESTION1: 'Há quanto tempo você trabalha nessa empresa?' ,
-  QUESTION2: 'Quantas pessoas tem na sua equipe?',
-  QUESTION3: 'Você recebe feedbacks com que frequência?',
-  QUESTION4: 'Como você avalia a estrutura organizacional da empresa?',
-  QUESTION5: 'Como você avalia o suporte prestado pela TI?',
-  QUESTION6: 'Como você avalia seu rendimento no tabalho, estando em home oficce?',
+  QUESTION1: 'Há quanto tempo você trabalha nessa empresa' ,
+  QUESTION2: 'Quantas pessoas tem na sua equipe',
+  QUESTION3: 'Você recebe feedbacks com que frequência',
+  QUESTION4: 'A estrutura organizacional da empresa',
+  QUESTION5: 'O suporte prestado pela TI',
+  QUESTION6: 'Seu rendimento no trabalho, estando em home oficce',
 }
 
 export const OPTIONS = {
