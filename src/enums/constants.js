@@ -2,9 +2,9 @@ export const QUESTION = {
   QUESTION1: 'Há quanto tempo você trabalha nessa empresa?' ,
   QUESTION2: 'Quantas pessoas tem na sua equipe?',
   QUESTION3: 'Você recebe feedbacks com que frequência?',
-  QUESTION4: '"quem é você"',
-  QUESTION5: '"quem é você"',
-  QUESTION6: '"quem é você"',
+  QUESTION4: 'quem é você',
+  QUESTION5: 'quem é você',
+  QUESTION6: 'quem é você',
 }
 
 export const OPTIONS = {
