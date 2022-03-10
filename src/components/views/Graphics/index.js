@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from "react"
 import { db, collection, getDocs } from "../../../firebase_config"
 import NivoGraphic from '../../NivoGraphic'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
+import { QUESTION } from '../../../enums/constants'
 
 function Graphics() {
   const dbCollection = collection(db, 'Questions')
   const [answer, setAnswer] = useState({})
+  const titles = {
+    question1: QUESTION.QUESTION1,
+    question2: QUESTION.QUESTION2,
+    question3: QUESTION.QUESTION3,
+    question4: QUESTION.QUESTION4,
+    question5: QUESTION.QUESTION5,
+    question6: QUESTION.QUESTION6,
+  }
  
   useEffect(() => {
     getAnswer()
@@ -42,12 +51,29 @@ function Graphics() {
     }))
     return dataAnswer
   }
-  
   return(
-    <Box style={{height:400}}>
+    <Box 
+      sx={{
+        height:"400px",
+        width: "100%",
+      }}
+    >
+      <Typography 
+        variant="h1" 
+        sx={{
+          fontSize:{md: "2.3rem", xs:"2rem"}, 
+          marginTop:{md: "4%", xs: "10%"}, 
+          marginBottom:"8%",
+          textAlign:"center",
+        }}
+      >     
+          Gráfico de resultados
+      </Typography>
+
       { 
-        Object.keys(answer).map((key, index)=> 
-          <NivoGraphic data={setNivoGraphic(answer[key])}key={index}/>)
+        Object.keys(answer).map((key, index)=> (
+          <NivoGraphic title={titles[key]} data={setNivoGraphic(answer[key])}key={index}/>
+        ))
       }
     </Box>
   )
