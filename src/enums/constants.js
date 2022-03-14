@@ -4,7 +4,7 @@ export const QUESTION = {
   QUESTION3: 'Você recebe feedbacks com que frequência',
   QUESTION4: 'A estrutura organizacional da empresa',
   QUESTION5: 'O suporte prestado pela TI',
-  QUESTION6: 'Seu rendimento no trabalho, estando em home oficce',
+  QUESTION6: 'Seu rendimento no trabalho, estando em home office',
 }
 
 export const OPTIONS = {

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
-import { db, collection, getDocs } from "../../../firebase_config"
-import NivoGraphic from '../../NivoGraphic'
+import { db, collection, getDocs } from "../../firebase_config"
+import NivoGraphic from '../../components/NivoGraphic'
 import { Box, Typography } from '@mui/material'
-import { QUESTION } from '../../../enums/constants'
+import { QUESTION } from '../../enums/constants'
 
 function Graphics() {
   const dbCollection = collection(db, 'Questions')

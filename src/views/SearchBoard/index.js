@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import { Button, Box, Typography } from '@mui/material'
-import { db, collection, setDoc, doc } from "../../../firebase_config"
+import { db, collection, setDoc, doc } from "../../firebase_config"
 import { useNavigate } from "react-router-dom"
-import FormQuestionPage1 from "../../FormQuestionPage1"
-import FormQuestionPage2 from "../../FormQuestionPage2"
-import { QUESTION, OPTIONS, STATUS } from "../../../enums/constants"
+import FormQuestionPage1 from "../../components/FormQuestionPage1"
+import FormQuestionPage2 from "../../components/FormQuestionPage2"
+import { QUESTION, OPTIONS, STATUS } from "../../enums/constants"
 
 function SearchBoard() {
   const dbCollection = collection(db, 'Questions')
@@ -117,8 +117,8 @@ function SearchBoard() {
                 onChange={ value => addQuestion('question4', value) }
               />
               <FormQuestionPage2
-                options={OPTIONS.OPTIONS4}
-                question={QUESTION.QUESTION5}
+                options={ OPTIONS.OPTIONS4 }
+                question={ QUESTION.QUESTION5 }
                 high= { STATUS.HIGH }
                 low= { STATUS.LOW }
                 value={ question }

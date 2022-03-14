@@ -1,9 +1,9 @@
 import React from "react";
-import Home from "../views/Home";
+import Home from "../../views/Home";
 import { createTheme, ThemeProvider } from '@mui/material';
 import { Route, Routes } from "react-router-dom";
-import SearchBoard from "../views/SearchBoard";
-import Graphics from "../views/Graphics";
+import SearchBoard from "../../views/SearchBoard";
+import Graphics from "../../views/Graphics";
 
 const customTheme = createTheme({
   palette: {
