@@ -1,14 +1,15 @@
 import { initializeApp } from "firebase/app"
 import { getFirestore, collection, getDocs, query, where, doc, setDoc, updateDoc, } from 'firebase/firestore'
 
+
 const firebaseConfig = {
-    apiKey: "AIzaSyDs_u170PamRlY4t1qQzrB31iwuVmtF2SU",
-    authDomain: "pesquisa-de-satisfacao-975b0.firebaseapp.com",
-    projectId: "pesquisa-de-satisfacao-975b0",
-    storageBucket: "pesquisa-de-satisfacao-975b0.appspot.com",
-    messagingSenderId: "451911741984",
-    appId: "1:451911741984:web:775144c44f290aa722c245",
-    measurementId: "G-R5K6YRSZK7"
+    apiKey: process.env.REACT_APP_APIKEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGIN_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+    measurementId: process.env.MEASUREMENT_ID
   };
 
 const app = initializeApp(firebaseConfig);
