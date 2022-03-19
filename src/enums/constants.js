@@ -1,4 +1,4 @@
-export const QUESTION = {
+export const QUESTION= {
   QUESTION1: 'Há quanto tempo você trabalha nessa empresa' ,
   QUESTION2: 'Quantas pessoas tem na sua equipe',
   QUESTION3: 'Você recebe feedbacks com que frequência',
@@ -7,7 +7,7 @@ export const QUESTION = {
   QUESTION6: 'Seu rendimento no trabalho, estando em home office',
 }
 
-export const OPTIONS = {
+export const OPTIONS= {
   OPTIONS1: [
     'Há menos de 1 ano', 
     'Entre 1 e 2 anos', 
@@ -39,7 +39,20 @@ export const OPTIONS = {
       '7'
   ],
 }
-export const STATUS = {
+export const STATUS= {
   LOW: 'Pouco satisfeito',
   HIGH: 'Muito satisfeito',
 }
+
+export const DEPARTMENT= [
+  'RH',
+  'Vendas',
+  'Financeiro',
+  "Desenvolvimento",
+  "Jurídico",
+  "TI",
+  'Marketing',
+  'Comercial',
+  'Sac',
+  'Operacional',
+]

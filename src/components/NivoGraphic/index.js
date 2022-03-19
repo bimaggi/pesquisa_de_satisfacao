@@ -2,43 +2,45 @@ import React from "react"
 import { ResponsiveBar } from "@nivo/bar"
 import { Typography } from '@mui/material'
 
-function NivoGraphic(props){
+function NivoGraphic( props ){
 	return(
     <>
     <Typography variant="h2" 
       sx={{
-        fontSize:{md:"1.6rem", xs:"1.2rem"},
-				padding:"3%", 
-				color:"gray",
-				marginTop:"2%",
-    }}
-    >{props.title}</Typography>
+        fontSize: { md:"1.6rem", xs:"1.2rem" },
+				padding: "3%", 
+				color: "gray",
+				marginTop: "2%",
+      }}
+    >
+			{ props.title }
+		</Typography>
     <ResponsiveBar
-	  data={props.data}
+	    data={ props.data }
       indexBy= "key"
       margin={{ top: 50, right: 75, bottom: 50, left: 60 }}
-      padding={0.2}
+      padding={ 0.2 }
       valueScale={{ type: 'linear' }}
       indexScale={{ type: 'band', round: true }}
-      colors={{  scheme: 'category10' }}
+      colors={{ scheme: 'category10' }}
       defs={[
           {
-              id: 'dots',
-              type: 'patternDots',
-              background: 'inherit',
-              color: '#2057b0',
-              size: 4,
-              padding: 1,
-              stagger: true
+            id: 'dots',
+            type: 'patternDots',
+            background: 'inherit',
+            color: '#2057b0',
+            size: 4,
+            padding: 1,
+            stagger: true
           },
           {
-              id: 'lines',
-              type: 'patternLines',
-              background: 'inherit',
-              color: '#eed312',
-              rotation: -45,
-              lineWidth: 6,
-              spacing: 10
+            id: 'lines',
+            type: 'patternLines',
+            background: 'inherit',
+            color: '#eed312',
+            rotation: -45,
+            lineWidth: 6,
+            spacing: 10
           }
       ]}
       borderColor={{
@@ -67,8 +69,8 @@ function NivoGraphic(props){
           legendPosition: 'middle',
           legendOffset: -40
       }}
-      labelSkipWidth={12}
-      labelSkipHeight={12}
+      labelSkipWidth={ 12 }
+      labelSkipHeight={ 12 }
       labelTextColor={{
           from: 'color',
           modifiers: [
@@ -104,10 +106,10 @@ function NivoGraphic(props){
       ]}
       role="application"
       ariaLabel="Nivo bar chart demo"
-      barAriaLabel={function(e){return e.id+": "+e.formattedValue+" in country: "+e.indexValue}}
-      minValue={0}
-   />
-   </>
- )
+      barAriaLabel={ function( e ) { return e.id+": "+e.formattedValue+" in country: "+e.indexValue }}
+      minValue={ 0 }
+    />
+  </>
+  )
 }
-export default NivoGraphic;
+export default NivoGraphic

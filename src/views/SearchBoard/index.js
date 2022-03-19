@@ -7,46 +7,46 @@ import FormQuestionPage2 from "../../components/FormQuestionPage2"
 import { QUESTION, OPTIONS, STATUS } from "../../enums/constants"
 
 function SearchBoard() {
-  const dbCollection = collection(db, 'Questions')
-  let navigate = useNavigate();
+  const dbCollection= collection( db, 'Questions' )
+  let navigate= useNavigate();
 
-  const[ showform, setShowForm ]= useState("true")
+  const [ showform, setShowForm ]= useState( "true" )
   const [ question, setQuestion ]= useState({})
 
-  function addQuestion(key, value) {
+  function addQuestion( key, value ) {
     setQuestion({
       ...question,
       [key]: value,
     })
   }
-  async function setNextPage(e) {
+  async function setNextPage( e ) {
     e.preventDefault()
-     if (question.question1 && question.question2 && question.question3) {
-      setShowForm("false")
+    if( question.question1 && question.question2 && question.question3 ) {
+      setShowForm( "false" )
     }
   }
   async function setResultPage( e ) {
     e.preventDefault()
-    if (question.question4 && question.question5 && question.question6) {
-      await setDoc(doc(dbCollection),{
+    if( question.question4 && question.question5 && question.question6 ) {
+      await setDoc(doc( dbCollection ), {
         question
       })
-      navigate("/graficos")
+      navigate( "/graficos" )
     }
   }
   return(
     <Box  
-      sx={{ 
+      sx= {{ 
         width: "100%"
       }}
     >
       <Typography 
-        variant="h1" 
+        variant= "h1" 
         sx={{ 
           fontSize: { md:"2rem", xs:"1.5rem" },
-          marginTop:{ md:"3%", xs:"15%"},
-          marginBottom:{ md:"3%", xs:"10%"},
-          textAlign:"center",
+          marginTop: { md:"3%", xs:"15%" },
+          marginBottom: { md:"3%", xs:"10%" },
+          textAlign: "center",
         }}
       >
         Pesquisa interna - RH 
@@ -55,40 +55,39 @@ function SearchBoard() {
       { showform === "true" 
       
       ? <Box>
-          <form onSubmit={ setNextPage } showform="true">
+          <form onSubmit={ setNextPage } showform= "true" >
             <FormQuestionPage1 
               question={ QUESTION.QUESTION1 }
-              options ={ OPTIONS.OPTIONS1 }
+              options={ OPTIONS.OPTIONS1 }
               value={ question }
               onChange={ value => addQuestion('question1', value) }
             />
             <FormQuestionPage1 
               question={ QUESTION.QUESTION2 }
-              options ={ OPTIONS.OPTIONS2 }
+              options={ OPTIONS.OPTIONS2 }
               value={ question }
               onChange={ value => addQuestion('question2', value) }
             />
             <FormQuestionPage1 
               question={ QUESTION.QUESTION3 }
-              options ={ OPTIONS.OPTIONS3 }
+              options={ OPTIONS.OPTIONS3 }
               value={ question }
               onChange={ value => addQuestion('question3', value) }
             />
             <Box  
               sx={{ 
-                paddingRight:"2rem",
+                paddingRight: "2rem",
                 textAlign: { md:"end", xs:"center" },
                 marginTop: { md: "1rem", xs: "3rem" }
               }}
             >
               <Button 
-                type="submit" 
-                variant="contained" 
-                color="primary"
+                type= "submit" 
+                variant= "contained" 
+                color= "primary"
               >
                 Próxima pagina
               </Button>
-            
             </Box>
           </form>
         </Box>
@@ -98,7 +97,7 @@ function SearchBoard() {
           }}>
             <Typography 
               sx={{
-                textAlign:"center",
+                textAlign: "center",
                 color: "gray",
               }}
             >
@@ -122,7 +121,7 @@ function SearchBoard() {
                 high= { STATUS.HIGH }
                 low= { STATUS.LOW }
                 value={ question }
-                onChange={ value => addQuestion('question5', value) }
+                onChange={ value => addQuestion('question5', value ) }
               />
               <FormQuestionPage2
                 options={OPTIONS.OPTIONS4}
@@ -130,7 +129,7 @@ function SearchBoard() {
                 high={ STATUS.HIGH }
                 low= { STATUS.LOW }
                 value={ question }
-                onChange={ value => addQuestion('question6', value) }
+                onChange={ value => addQuestion('question6', value ) }
               />
               <Box sx={{ 
                 paddingRight:"2rem",
@@ -149,6 +148,6 @@ function SearchBoard() {
           </Box>
         }
     </Box>
-  );
+  )
 }
-export default SearchBoard;
+export default SearchBoard

@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app"
 import { getFirestore, collection, getDocs, query, where, doc, setDoc, updateDoc, } from 'firebase/firestore'
 
 
-const firebaseConfig = {
+const firebaseConfig= {
     apiKey: process.env.REACT_APP_APIKEY,
     authDomain: process.env.REACT_APP_AUTH_DOMAIN,
     projectId: process.env.REACT_APP_PROJECT_ID,
@@ -12,6 +12,7 @@ const firebaseConfig = {
     measurementId: process.env.MEASUREMENT_ID
   };
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app)
+const app= initializeApp( firebaseConfig )
+const db= getFirestore( app )
+
 export { db,collection, getDocs, query, where, doc, setDoc, updateDoc }
