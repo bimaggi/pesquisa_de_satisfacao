@@ -60,14 +60,14 @@ function SearchSetup() {
         sx={{ mb: "1rem" }} 
         label="Nome" 
         variant="outlined"
-        error={nameError}
+        error={ nameError }
         onChange={ handleSetName }
       />
       <TextField 
         sx={{ mb:"1rem" }} 
         label="Departamento" 
         variant="outlined"
-        error={departmentError}
+        error={ departmentError }
         onChange={ handleSetDepartment }
       />
       <Button 

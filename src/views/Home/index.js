@@ -1,8 +1,8 @@
 import React from "react";
-import Logo from '../../../assets/Logo/logo.jpg' ;
-import Logo1 from '../../../assets/Logo/logo1.png' ;
+import Logo from '../../assets/Logo/logo.jpg'
+import Logo1 from '../../assets/Logo/logo1.png' ;
 import { Grid } from '@mui/material';
-import SearchSetup from '../../../components/SearchSetup'
+import SearchSetup from '../../components/SearchSetup'
 
 function Home() {
   return (
