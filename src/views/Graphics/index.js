@@ -62,11 +62,13 @@ function Graphics() {
      setDepartment( departments )
  }
   function setNivoGraphic( data = [] ) {
-    const dataAnswer= data.map( item => ({
+    const dataAnswer=  data.map( item => ({
       key: item,
-      value: data.filter( v => v === item ).length
+      value: data.filter( v => v === item ).length 
     }))
-    return dataAnswer
+      //console.log(data, 'data')
+      //console.log(dataAnswer, 'dataAnswer')
+      return dataAnswer
   }
   return(
     <Box 
@@ -86,7 +88,6 @@ function Graphics() {
       >     
           Gráfico de resultados
       </Typography>
-
       { 
         Object.keys( department ).map(( key, index )=> (
           <NivoGraphic 

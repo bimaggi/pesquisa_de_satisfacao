@@ -1,5 +1,5 @@
 import React from "react"
-import Logo from '../../assets/Logo/logo.jpg'
+import Logo from '../../assets/Logo/logo.png'
 import Logo1 from '../../assets/Logo/logo1.png' 
 import { Grid } from '@mui/material'
 import SearchSetup from '../../components/SearchSetup'
@@ -15,7 +15,12 @@ function Home() {
     >
       <Grid item
         display= "flex" 
-        sx= {{ display: { xs:'none', md:'block' } }}
+        sx= {{ 
+          display: { xs:'none', md:'block' },
+          width:'50%', mb:'5%',
+          textAlign: "center",
+          marginTop: "8%"
+        }}
       >
         <img src={ Logo } alt="logo"/>
       </Grid>
@@ -31,10 +36,14 @@ function Home() {
         <Grid item 
           sx={{ 
             display: { md:'none', xs:'block' }, 
-            width:'85%', mb:'5%' 
+            width:'100%', mb:'5%',
+            textAlign: "center"
           }} 
         >
-          <img src= { Logo1 } alt= "logo"/>
+          <img src= { Logo1 } alt= "logo"
+          sx={{ 
+            width:'100%', 
+          }} />
         </Grid>
         <SearchSetup />
       </Grid>

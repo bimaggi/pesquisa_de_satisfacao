@@ -44,15 +44,24 @@ function FormQuestionPage2( props ) {
             justifyContent: "space-between",
             width: { md:"50%", xs:"100%" },
             border: { md: "1px solid gray", xs:'none' },
-            padding: "2%"
-
+            padding: "2%",
            }}
           onClick={ handleOption }
+
         >
          { props.options.map(( item, index ) =>
          <Button 
            key={ index } 
-           value={ item } 
+           value={item} 
+           sx={{'&:focus': {
+            boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+          },
+          '&:active': {
+            boxShadow: 'none',
+            backgroundColor: '#0062cc',
+            borderColor: '#005cbf',
+          },
+          }}
           >
             {item}
           </Button>
