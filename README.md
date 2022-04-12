@@ -1,83 +1,51 @@
 ## Pesquisa de satisfação 
 
-## Made with
+Esta é uma página de Pesquisa interna de satisfação. Para participar da pesquisa o funcionário registra seu nome e departamento, aí sim responde as pesquisas e têm acesso ao gráfico de respostas, que contabiliza tanto a participação por departamento, quanto ás respostas em si, desvinculando o nome do funcionário das respostas, para assim manter o sigilo e o conforto do mesmo.
+
+<img src='https://user-images.githubusercontent.com/66282316/162977605-bcb0c1c8-0871-47a3-8a88-d14c82dae41b.png' style="width:500px;">
+<img src='https://user-images.githubusercontent.com/66282316/162977905-b5bc8121-ed53-4d8a-9b02-30bbcda7ba4e.png' style="width:500px;">
+<img src='https://user-images.githubusercontent.com/66282316/162978010-d4326347-d3c1-4295-b748-c6658ceaaa4d.png' style="width:500px;">
+<img src='https://user-images.githubusercontent.com/66282316/162978120-8a877b81-d522-4804-a563-b1fb8d9c7fc6.png' style="width:500px;">
+
+## Projeto desenvolvido
 ```
 React 
+Material ui
 Firebase
 Nivo Rocks
 ```
 
-## Tools used
+## Crie o projeto em React utilizando 
 ```
-Material ui
+npx create-react-app nome-do-projeto
 ```
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
+## Você vai precisar instalar  
+```
+npm install firebase
+npm install react-router-dom@6
+npm install @nivo/core
+npm install dotenv
+npm install @mui/material @emotion/react @emotion/styled
+```
+## Scripts Disponíveis
+```
+No diretório do projeto, você pode executar:
+```
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
+```
+Inicia o executor de teste no modo de exibição interativa.\
+Consulte a seção sobre [execução de testes](https://facebook.github.io/create-react-app/docs/running-tests) para obter mais informações.
+```
 ### `npm run build`
+```
+Compila o aplicativo para produção na pasta `build`.\
+Ele agrupa corretamente o React no modo de produção e otimiza a compilação para o melhor desempenho.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A compilação é reduzida e os nomes dos arquivos incluem os hashes.\
+Seu aplicativo está pronto para ser implantado!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Consulte a seção sobre [implantação](https://facebook.github.io/create-react-app/docs/deployment) para obter mais informações.
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Para visualizar o projeto acesse 
+### https://pesquisa-de-satisfacao-975b0.web.app/ 
